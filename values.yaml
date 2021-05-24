@@ -38,7 +38,9 @@ securityContext: {}
 
 service:
   type: NodePort
+  targetport: 80
   port: 80
+  nodeport: 30004
 
 ingress:
   enabled: false
@@ -46,7 +48,7 @@ ingress:
   kubernetes.io/ingress.class: traefik
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: k3s.fab4r.pw
+    - host: hostNameHere
       paths: []
   tls: []
   #  - secretName: chart-example-tls
